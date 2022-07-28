@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import TableRow from './TablaRow';
 
 const Tabla = () => {
-  const [productos, setProductos] = useState([]);
+  /* const [productos, setProductos] = useState([]);
 
   useEffect(() => {
     fetch('http://localhost:3030/api/store')
@@ -16,9 +16,9 @@ const Tabla = () => {
         }
       });
   }, []);
-  console.log(productos);
+  console.log(productos); */
 
-  render();
+  /* render(); */
   return (
     <div className="container-fluid">
       <div className="card shadow mb-4">
@@ -44,11 +44,9 @@ const Tabla = () => {
               </tbody>
               <tfoot>
                 <tr>
-                  <th>Título</th>
-                  <th>Duración</th>
-                  <th>Rating</th>
-                  <th>Género</th>
-                  <th>Premios</th>
+                  <th>Nombre</th>
+                  <th>Descripcion</th>
+                  <th>precio</th>
                 </tr>
               </tfoot>
             </table>

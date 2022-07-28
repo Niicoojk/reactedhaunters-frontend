@@ -33,7 +33,6 @@ function ContentRowTop() {
       });
   }, []);
 
-  console.log(universos);
   return (
     <React.Fragment>
       {/*<!-- Content Row Top -->*/}
