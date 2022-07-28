@@ -12,7 +12,7 @@ function ContentRowTop() {
   const [productos, setProductos] = useState([]);
 
   const productoUnico = productos.filter(
-    (producto) => producto.product_id === 1
+    (producto) => producto.product_id === 17
   );
 
   useEffect(() => {
