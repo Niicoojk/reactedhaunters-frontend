@@ -1,5 +1,5 @@
 import React from "react";
-import foto from "../assets/images/logo-DH.png";
+import foto from '../assets/images/default.jpg';
 
 function TopBar() {
   return (

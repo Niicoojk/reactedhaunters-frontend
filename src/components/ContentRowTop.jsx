@@ -56,8 +56,11 @@ function ContentRowTop() {
           {/*<!-- Last Movie in DB -->*/}
           <div className="col-lg-6 mb-4">
             <div className="card shadow mb-4">
-              <div className="card-header py-3">
-                <h5 className="m-0 font-weight-bold text-gray-800">
+              <div
+                className="card-header py-3"
+                style={{ width: 'auto', height: 'auto' }}
+              >
+                <h5 className="m-0 font-weight-bold text-gray-800 ">
                   Producto Destacado
                 </h5>
                 {productos.length > 1 &&
@@ -65,38 +68,18 @@ function ContentRowTop() {
                     return (
                       <ProductoDestacado
                         imagen={producto.image}
-                        descripcion={producto.long_desc}
+                        descripcion={producto.short_desc}
                         name={producto.name}
                         key={i}
                       />
                     );
                   })}
               </div>
-              <div className="card-body"></div>
             </div>
           </div>
           {/*<!-- End content row last movie in Data Base -->*/}
 
           {/*<!--Categorias -->*/}
-          <div className="col-lg-6 mb-4">
-            <div className="card shadow mb-4">
-              <div className="card-header py-3">
-                <h5 className="m-0 font-weight-bold text-gray-800">
-                  Categorias
-                </h5>
-              </div>
-              <div className="card-body">
-                <div className="row">
-                  {tier.length > 1 &&
-                    tier.map((categoria, indx) => {
-                      return (
-                        <CardCategory value={categoria.value} key={indx} />
-                      );
-                    })}
-                </div>
-              </div>
-            </div>
-          </div>
 
           {/*<!-Universos -->*/}
           <div className="col-lg-6 mb-4">
@@ -116,6 +99,22 @@ function ContentRowTop() {
                     })}
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="col-lg-6 mb-4">
+        <div className="card shadow mb-4">
+          <div className="card-header py-3">
+            <h5 className="m-0 font-weight-bold text-gray-800">Categorias</h5>
+          </div>
+          <div className="card-body">
+            <div className="row">
+              {tier.length > 1 &&
+                tier.map((categoria, indx) => {
+                  return <CardCategory value={categoria.value} key={indx} />;
+                })}
             </div>
           </div>
         </div>
