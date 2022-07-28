@@ -1,5 +1,10 @@
 import React from "react";
 import image from "../assets/images/logo-DH.png";
+import { Routes, Route, Link } from 'react-router-dom';
+import ListUser from './pages/ListUser';
+import ContentWrapper from './ContentWrapper';
+import Productos from './pages/Productos';
+import NotFound from './NotFound';
 
 function SideBar() {
   return (
@@ -24,10 +29,10 @@ function SideBar() {
 
         {/*<!-- Nav Item - Dashboard -->*/}
         <li className="nav-item active">
-          <a className="nav-link" href="/">
+          <Link to="/" className="nav-link">
             <i className="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard - DHaunters</span>
-          </a>
+            <span>Dashboard - DH movies</span>
+          </Link>
         </li>
 
         {/*<!-- Divider -->*/}
@@ -38,24 +43,31 @@ function SideBar() {
 
         {/*<!-- Nav Item - Pages -->*/}
         <li className="nav-item">
-          <a className="nav-link collapsed" href="/">
+          <Link to={'/usuarios'} className="nav-link collapsed">
             <i className="fas fa-fw fa-folder"></i>
             <span>Usuarios</span>
-          </a>
+          </Link>
         </li>
 
         {/*<!-- Nav Item - Tables -->*/}
         <li className="nav-item">
-          <a className="nav-link" href="/">
+          <Link to={'/productos'} className="nav-link">
             <i className="fas fa-fw fa-table"></i>
             <span>Productos</span>
-          </a>
+          </Link>
         </li>
 
         {/*<!-- Divider -->*/}
         <hr className="sidebar-divider d-none d-md-block" />
       </ul>
       {/*<!-- End of Sidebar -->*/}
+
+      <Routes>
+        <Route path="/usuarios" element={<ListUser />} />
+        <Route path="/productos" element={<Productos />} />
+        <Route path="/" element={<ContentWrapper />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </React.Fragment>
   );
 }

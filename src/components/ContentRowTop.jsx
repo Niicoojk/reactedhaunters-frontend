@@ -66,6 +66,7 @@ function ContentRowTop() {
                       <ProductoDestacado
                         imagen={producto.image}
                         descripcion={producto.long_desc}
+                        name={producto.name}
                         key={i}
                       />
                     );
