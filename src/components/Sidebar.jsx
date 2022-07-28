@@ -26,7 +26,7 @@ function SideBar() {
         <li className="nav-item active">
           <a className="nav-link" href="/">
             <i className="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard - DH movies</span>
+            <span>Dashboard - DHaunters</span>
           </a>
         </li>
 
@@ -40,15 +40,7 @@ function SideBar() {
         <li className="nav-item">
           <a className="nav-link collapsed" href="/">
             <i className="fas fa-fw fa-folder"></i>
-            <span>Pages</span>
-          </a>
-        </li>
-
-        {/*<!-- Nav Item - Charts -->*/}
-        <li className="nav-item">
-          <a className="nav-link" href="/">
-            <i className="fas fa-fw fa-chart-area"></i>
-            <span>Charts</span>
+            <span>Usuarios</span>
           </a>
         </li>
 
@@ -56,7 +48,7 @@ function SideBar() {
         <li className="nav-item">
           <a className="nav-link" href="/">
             <i className="fas fa-fw fa-table"></i>
-            <span>Tables</span>
+            <span>Productos</span>
           </a>
         </li>
 

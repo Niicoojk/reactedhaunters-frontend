@@ -1,12 +1,11 @@
-import { render } from '@testing-library/react';
 import React, { useState, useEffect } from 'react';
 import TableRow from './TablaRow';
 
-const Tabla = () => {
-  /* const [productos, setProductos] = useState([]);
+function Tabla() {
+  const [productos, setProductos] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3030/api/store')
+    fetch('http://localhost:3000/api/dashboard')
       .then((response) => response.json())
       .then((data) => {
         if (data.data.products) {
@@ -16,9 +15,7 @@ const Tabla = () => {
         }
       });
   }, []);
-  console.log(productos); */
 
-  /* render(); */
   return (
     <div className="container-fluid">
       <div className="card shadow mb-4">
@@ -33,28 +30,22 @@ const Tabla = () => {
                 </tr>
               </thead>
               <tbody>
-                {/* productos.map((data, index) => (
-                  <TableRow
-                    name={data.name}
-                    short_desc={data.short_desc}
-                    price={data.price}
-                    key={index}
-                  />
-                )) */}
+                {productos.length > 1 &&
+                  productos.map((producto, index) => (
+                    <TableRow
+                      name={producto.name}
+                      short_desc={producto.short_desc}
+                      price={producto.price}
+                      key={index}
+                    />
+                  ))}
               </tbody>
-              <tfoot>
-                <tr>
-                  <th>Nombre</th>
-                  <th>Descripcion</th>
-                  <th>precio</th>
-                </tr>
-              </tfoot>
             </table>
           </div>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default Tabla;

@@ -11,8 +11,12 @@ function ContentRowTop() {
   const [tier, setTiers] = useState([]);
   const [productos, setProductos] = useState([]);
 
+  const productoUnico = productos.filter(
+    (producto) => producto.product_id === 1
+  );
+
   useEffect(() => {
-    fetch('http://localhost:3030/api/store')
+    fetch('http://localhost:3000/api/dashboard')
       .then((response) => response.json())
       .then((data) => {
         if (data.data.universes) {
@@ -57,7 +61,7 @@ function ContentRowTop() {
                   Producto Destacado
                 </h5>
                 {productos.length > 1 &&
-                  productos.map((producto, i) => {
+                  productoUnico.map((producto, i) => {
                     return (
                       <ProductoDestacado
                         imagen={producto.image}
