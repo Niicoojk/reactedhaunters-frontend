@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../assets/images/logo-DH.png";
+import image from '../assets/images/ghost-logo.png';
 import { Routes, Route, Link } from 'react-router-dom';
 import ListUser from './pages/ListUser';
 import ContentWrapper from './ContentWrapper';
@@ -20,7 +20,7 @@ function SideBar() {
           href="/"
         >
           <div className="sidebar-brand-icon">
-            {<img className="w-100" src={image} alt="Digital House" />}
+            {<img className="w-50" src={image} alt="Digital House" />}
           </div>
         </a>
 
@@ -31,7 +31,7 @@ function SideBar() {
         <li className="nav-item active">
           <Link to="/" className="nav-link">
             <i className="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard - DH movies</span>
+            <span>Dashboard - DHaunters</span>
           </Link>
         </li>
 

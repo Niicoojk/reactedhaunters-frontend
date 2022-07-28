@@ -2,16 +2,20 @@ import React from 'react';
 
 const ProductosRow = ({ image, name, short_desc, price }) => {
   return (
-    <div class="col">
-      <div class="card h-100">
+    <div className="col">
+      <div className="card h-100">
         <div>
-          <img src={image} class="card-img-top" alt={name} />
-          <div class="card-body">
-            <h5 class="card-title">{name}</h5>
-            <p class="card-text">{short_desc}</p>
+          <img
+            src={`/img/products/${image}`}
+            className="card-img-top"
+            alt={name}
+          />
+          <div className="card-body">
+            <h5 className="card-title">{name}</h5>
+            <p className="card-text">{short_desc}</p>
           </div>
-          <div class="card-footer">
-            <small class="text-muted">$ {price}</small>
+          <div className="card-footer">
+            <small className="text-muted">$ {price}</small>
           </div>
         </div>
       </div>
